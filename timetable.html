@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+    </style>
+    <title>Document</title>
+</head>
+<body class="google-sans-body">
+    <div class="container">
+  <h1>School Timetable Generator</h1>
+  
+  <div class="controls">
+    <div class="control-group subjects-input">
+      <label for="subjects">Subjects (comma-separated):</label>
+      <input type="text" id="subjects" value="Mathematics, English, Physics, Chemistry, Biology, History, Geography, Computer Science, Physical Education">
+    </div>
+    
+    <div class="control-group">
+      <label for="startTime">School Start Time:</label>
+      <input type="time" id="startTime" value="08:00">
+    </div>
+    
+    <div class="control-group">
+      <label for="periodDuration">Period Duration (mins):</label>
+      <input type="number" id="periodDuration" value="45" min="20" max="120">
+    </div>
+    
+    <div class="control-group">
+      <label for="periodsPerDay">Periods Per Day:</label>
+      <input type="number" id="periodsPerDay" value="7" min="4" max="10">
+    </div>
+
+    <div class="control-group">
+      <label for="breakAfter">Break After Period #:</label>
+      <input type="number" id="breakAfter" value="4" min="1" max="8">
+    </div>
+
+    <div class="btn-group">
+      <button onclick="generateTimetable()">Generate / Shuffle Timetable</button>
+      <button class="print-btn" onclick="window.print()">Print Timetable</button>
+    </div>
+  </div>
+
+  <div id="timetableContainer"></div>
+</div>
+</body>
+</html>
